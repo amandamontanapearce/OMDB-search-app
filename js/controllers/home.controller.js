@@ -1,6 +1,12 @@
 angular.module('movieApp')
-.controller('homecontroller', homecontroller);
+.controller('homeController', homeController);
 
-function homecontroller($scope, $state){
-  console.log('please work');
+function homeController($scope, $state){
+  console.log('hitting homecontroller');
+  $scope.getMovies = function () {
+    console.log('hitting getMovies')
+    $state.go('home.movies', {
+      title: $scope.title,
+    });
+  }
 };

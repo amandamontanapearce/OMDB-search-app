@@ -1,3 +1,10 @@
-<div class="">
-  <h1>OMDB Search</h1>
+<div class="container">
+  <h2>Search for your favorite movies, enter a movie by title!</h2>
+  <form class="form">
+    <input type="text" name="search" value="" placeholder="Search by movie title" ng-model="title">
+  </form>
+  <a ng-click="getMovies()" class="btn btn-danger">Searchs Now!</a>
+  <div ui-view>
+
+  </div>
 </div>
